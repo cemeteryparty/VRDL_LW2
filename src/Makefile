@@ -1,7 +1,9 @@
 all:
-	unzip /mnt/left/phlai_DATA/vrdl5008/train.zip -d ./
-	cp /mnt/left/phlai_DATA/vrdl5008/digitStruct.mat ./
+	unzip train.zip -d ./
+	cp train/digitStruct.mat ./
 	rm -rf __MACOSX/ train/see_bboxes.m train/digitStruct.mat
+	unzip -qq test.zip -d ./
+	rm -rf __MACOSX/
 install:
 	pip install keras-retinanet
 #	git clone https://github.com/fizyr/keras-retinanet.git
